@@ -1,0 +1,38 @@
+[System]
+Name='Fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='speed_ref'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.195 0.222 0.556878306878307]
+MF2='mf2':'trimf',[0.0119047619047619 0.428571428571429 0.845238095238095]
+MF3='mf3':'trimf',[0.363730158730159 0.808201058201058 1.19873015873016]
+
+[Input2]
+Name='speed_fb'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='T_ref'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]
